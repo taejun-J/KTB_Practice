@@ -2,13 +2,19 @@ package week1;
 
 public class Latte extends Coffee{
     
-    @Override
-    void extract(){
-        System.out.println("원두 1샷을 추출합니다.");
-        // 기본 2샷대신 라떼는 1샷만 추출하도록 기존 extract메서드를 오버라이드
+    //라떼에 들어가는 우유 종류 입력받기(ex.일반,오트,아몬드)
+    private String milkType;
+
+    public Latte(){
+        super("라떼",4500,1);
+        //디폴트값
+        milkType = "일반";
     }
 
-    void addMilk(){
-        System.out.println("우유를 추가합니다.");
+    public void changeMilk(String milkType){
+        this.milkType = milkType;
+    }
+    public String getMilkType(){
+        return milkType;
     }
 }
