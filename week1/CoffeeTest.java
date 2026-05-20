@@ -95,5 +95,7 @@ public class CoffeeTest {
 
 
         }
+        //스캐너 할당 해제
+        sc.close();
     }
 }
